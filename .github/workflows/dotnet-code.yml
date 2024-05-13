@@ -3,7 +3,7 @@ name: dotnet package
 on: [push]
 
 jobs:
-  build:
+  test-and-compile:
 
     runs-on: ubuntu-latest
 

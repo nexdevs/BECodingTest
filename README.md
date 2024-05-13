@@ -1,6 +1,8 @@
 ﻿
 # This project
 
+[![test / build](https://github.com/nexdevs/BECodingTest/actions/workflows/dotnet-code.yml/badge.svg)](https://github.com/nexdevs/BECodingTest/actions/workflows/dotnet-code.yml)
+
 ### The solution
 
 The solution consists in a C# .NET Console Application program, IDE Visual Studio 2022 was used for this purpose.
