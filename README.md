@@ -21,7 +21,7 @@ Snakes, 1 pt
 FC Awesome, 1 pt
 Grouches, 0 pts
 
-C:\Users\Octavio Mireles\source\repos\BECodingTest\RankingLeagueCalculator\bin\Debug\net8.0\RankingLeagueCalculator.exe (process 22024) exited with code 0.
+C:\<path to project>\BECodingTest\RankingLeagueCalculator\bin\Debug\net8.0\RankingLeagueCalculator.exe (process 22024) exited with code 0.
 To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
 Press any key to close this window . . .
 ```
