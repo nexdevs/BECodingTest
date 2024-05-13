@@ -18,23 +18,22 @@ ArgumentException.ThrowIfNullOrEmpty(gameWinPoints);
 string? gamelossPoints = appSettings.Get("GameLossPoints");
 ArgumentException.ThrowIfNullOrEmpty(gamelossPoints);
 
-string? reader = appSettings.Get("Reader");
-ArgumentException.ThrowIfNullOrEmpty(reader);
+string? readerString = appSettings.Get("Reader");
+ArgumentException.ThrowIfNullOrEmpty(readerString);
 
-string? writer = appSettings.Get("Writter");
-ArgumentException.ThrowIfNullOrEmpty(writer);
+string? writerString = appSettings.Get("Writter");
+ArgumentException.ThrowIfNullOrEmpty(writerString);
 
 /*
  * Initialize application and dependencies and run
  */
-ApplicationBuilder builder = new();
 
-builder.Reader = builder.BuildReader(reader);
-builder.Writter = builder.BuildWritter(writer);
+DataReader reader = ApplicationBuilder.BuildReader(readerString);
+DataWritter writter = ApplicationBuilder.BuildWritter(writerString);
 
 Game game = new(Int32.Parse(gameTiePoints), Int32.Parse(gameWinPoints), Int32.Parse(gamelossPoints));
 
-Application application = builder.Build(game);
+Application application = ApplicationBuilder.Build(game, reader, writter);
 
 application.Run();
 

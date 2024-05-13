@@ -54,15 +54,14 @@ namespace RankingLeagueCalculatorTests
         public void TestApplicationBuilderReader()
         {
             ApplicationBuilder builder = new();
-            DataReader dataReader = builder.BuildReader("Stdin");
+            DataReader dataReader = ApplicationBuilder.BuildReader("Stdin");
             Assert.IsInstanceOfType<StdinReader>(dataReader);
         }
 
         [TestMethod]
         public void TestApplicationBuilderWritter()
         {
-            ApplicationBuilder builder = new();
-            DataWritter dataWritter = builder.BuildWritter("Stdout");
+            DataWritter dataWritter = ApplicationBuilder.BuildWritter("Stdout");
             Assert.IsInstanceOfType<StdoutWritter>(dataWritter);
         }
     }

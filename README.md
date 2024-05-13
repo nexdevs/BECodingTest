@@ -5,6 +5,8 @@
 
 The solution consists in a C# .NET Console Application program, IDE Visual Studio 2022 was used for this purpose.
 
+* Job was developed in Windows, but build process occurs in Linux systems
+
 
 Sample execution using copy-paste method:
 
@@ -47,6 +49,16 @@ Use `App.config` to define rules externally to program:
 ```
 
 ### Unit testing
+
+Unit testing execution can be found here:
+https://github.com/nexdevs/BECodingTest/actions/
+
+
+```bash
+A total of 1 test files matched the specified pattern.
+Results File: /home/runner/work/BECodingTest/BECodingTest/TestResults-8.0.x/_fv-az1187-815_2024-05-13_23_43_07.trx
+Passed!  - Failed:     0, Passed:     5, Skipped:     0, Total:     5, Duration: 67 ms - RankingLeagueCalculatorTests.dll (net8.0)
+```
 
 ### Automatic pipeline automation
 

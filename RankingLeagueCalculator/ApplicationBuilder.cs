@@ -9,15 +9,12 @@ namespace RankingLeagueCalculator
 {
     public class ApplicationBuilder : IApplicationBuilder
     {
-        public DataReader Reader { get; set; }
-        public DataWritter Writter { get; set; }
-
-        public Application Build(Game game)
+        public static Application Build(Game game, DataReader reader, DataWritter writter)
         {
-            return new Application(game, Reader, Writter);
+            return new Application(game, reader, writter);
         }
 
-        public DataReader BuildReader(string reader)
+        public static DataReader BuildReader(string reader)
         {
             DataReader dataReader = reader switch
             {
@@ -28,7 +25,7 @@ namespace RankingLeagueCalculator
             return dataReader;
         }
 
-        public DataWritter BuildWritter(string writter)
+        public static DataWritter BuildWritter(string writter)
         {
             DataWritter dataWritter = writter switch
             {
