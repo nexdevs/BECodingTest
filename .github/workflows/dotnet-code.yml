@@ -19,7 +19,7 @@ jobs:
         run: dotnet --version
 
       - name: Test with dotnet
-        run: dotnet test --logger trx --results-directory "./tests-results"
+        run: dotnet test --logger trx
 
       - name: dotnet publish  
         run: |  
@@ -31,4 +31,4 @@ jobs:
           name: artifacts
           path: |
             "./tests-results"
-            "./publish"
+            "./bin/Release"
