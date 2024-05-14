@@ -23,7 +23,7 @@ jobs:
 
       - name: dotnet publish  
         run: |  
-          dotnet build --configuration Release -p:PublishSingleFile=true -p:PublishTrimmed=true --runtime win-x64 --self-contained true
+          dotnet publish --configuration Release -p:PublishSingleFile=true -p:PublishTrimmed=true --runtime win-x64 --self-contained true
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
