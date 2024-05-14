@@ -25,5 +25,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: artifacts
-          path: |
-            "/home/runner/work/BECodingTest/BECodingTest/RankingLeagueCalculatorTests/TestResults"
+          path: "/home/runner/work/BECodingTest/BECodingTest/RankingLeagueCalculatorTests/TestResults"
