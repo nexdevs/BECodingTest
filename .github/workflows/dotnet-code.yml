@@ -23,12 +23,12 @@ jobs:
 
       - name: dotnet publish  
         run: |  
-          dotnet build -c Release
+          dotnet build --configuration Release -p:PublishSingleFile=true -p:PublishTrimmed=true --runtime win-x64 --self-contained true
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v4
         with:
           name: artifacts
           path: |
-            "../RankingLeagueCalculatorTests/TestResults"
+            "/home/runner/work/BECodingTest/BECodingTest/RankingLeagueCalculatorTests/TestResults"
             "./bin/Release"
